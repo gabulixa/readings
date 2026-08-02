@@ -1,437 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pentágono Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="badge green">ES</span>
+        <span class="meta">2026-08-02 10:59:26</span>
+        <span class="status warning">MERCADO DE VALORES: CERRADO POR FIN DE SEMANA</span>
+        <span class="meta">ABRE EN 22h 30m</span>
+        <span class="meta dot">8 UBICACIONES MONITOREADAS</span>
+      </div>
+      <div class="topbar-right">
+        <span class="pill">HISTORIA</span>
+        <span class="pill purple">MERCADOS</span>
+        <span class="meta">ESTADO: <strong>OPERACIONAL</strong></span>
+      </div>
+    </header>
 
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', monospace; }
+    <main class="container">
+      <section class="hero">
+        <div class="hero-main">
+          <div class="brand-row">
+            <span class="logo">🛡️</span>
+            <div>
+              <h1>PIZZA PENTÁGONO</h1>
+              <p>Inteligencia por porción | Impulsado por datos ficticios</p>
+            </div>
+          </div>
 
-  .top-bar {
-    background: #0f0f0f;
-    border-bottom: 1px solid #1a1a1a;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 11px;
-    color: #666;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  .top-bar .logo { color: #c0392b; font-weight: bold; font-size: 13px; letter-spacing: 2px; }
-  .top-bar .live-badge {
-    background: #c0392b;
-    color: #fff;
-    font-size: 9px;
-    padding: 2px 6px;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    animation: blink 1.5s infinite;
-  }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.5} }
-  .top-bar .juicio-badge {
-    background: #1a1a1a;
-    color: #e67e22;
-    font-size: 9px;
-    padding: 2px 8px;
-    border: 1px solid #e67e22;
-    border-radius: 2px;
-    letter-spacing: 1px;
-  }
-  .top-bar .sep { color: #333; margin: 0 4px; }
-  .top-bar .right { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+          <div class="highlight-card success">
+            <div class="highlight-title">DOUGHCON 5</div>
+            <div class="highlight-subtitle">DESVANECIMIENTO · ESTADO MÁS BAJO DE PREPARACIÓN</div>
+          </div>
+        </div>
 
-  .ticker {
-    background: #c0392b;
-    color: #fff;
-    font-size: 10px;
-    padding: 5px 16px;
-    letter-spacing: 1px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .ticker span { animation: scroll 30s linear infinite; display: inline-block; }
-  @keyframes scroll { 0%{transform:translateX(100%)} 100%{transform:translateX(-100%)} }
+        <aside class="hero-side">
+          <div class="side-header">
+            <span class="section-tag">Support Pentagón Pizza Watch</span>
+          </div>
 
-  .main { display: grid; grid-template-columns: 240px 1fr; min-height: 700px; }
+          <div class="feed-card">
+            <div class="feed-title">
+              <span>OSINT FEED</span>
+              <span class="live">● LIVE</span>
+            </div>
 
-  .sidebar {
-    background: #0d0d0d;
-    border-right: 1px solid #1a1a1a;
-    padding: 16px 0;
-  }
-  .sidebar-title {
-    color: #666;
-    font-size: 9px;
-    letter-spacing: 2px;
-    padding: 0 16px 12px;
-    border-bottom: 1px solid #1a1a1a;
-    margin-bottom: 12px;
-  }
-  .filter-group { padding: 0 16px 16px; border-bottom: 1px solid #1a1a1a; margin-bottom: 8px; }
-  .filter-label { color: #555; font-size: 9px; letter-spacing: 1px; margin-bottom: 6px; }
-  .filter-btn {
-    display: block;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    color: #999;
-    font-size: 11px;
-    font-family: inherit;
-    padding: 4px 8px;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-bottom: 2px;
-    border-left: 2px solid transparent;
-    transition: all 0.1s;
-  }
-  .filter-btn.active { color: #e0e0e0; border-left-color: #c0392b; background: #1a1a1a; }
-  .filter-btn:hover { color: #e0e0e0; background: #151515; }
+            <div class="feed-grid">
+              <article class="tweet">
+                <div class="tweet-user">@sentdefender</div>
+                <p>Se detectó una actividad inusual en múltiples regiones. El patrón sigue siendo volátil, pero el sistema permanece estable.</p>
+                <span class="tweet-meta">1h ago · EN VIVO</span>
+              </article>
+              <article class="tweet alert">
+                <div class="tweet-user">@conflict_radar</div>
+                <p>Los indicadores sugieren movimiento en corredores clave. La lectura principal continúa bajo vigilancia activa.</p>
+                <span class="tweet-meta">1h ago · MERCADOS</span>
+              </article>
+              <article class="tweet">
+                <div class="tweet-user">@frontline</div>
+                <p>Las señales térmicas se mantienen dentro del rango esperado. No hay cambios críticos en la última ventana.</p>
+                <span class="tweet-meta">1h ago · EN VIVO</span>
+              </article>
+            </div>
+          </div>
+        </aside>
+      </section>
 
-  .stat-box {
-    margin: 12px 16px;
-    background: #111;
-    border: 1px solid #1a1a1a;
-    padding: 10px 12px;
-    border-radius: 2px;
-  }
-  .stat-box .s-label { font-size: 9px; color: #555; letter-spacing: 1px; margin-bottom: 4px; }
-  .stat-box .s-val { font-size: 18px; font-weight: bold; color: #c0392b; }
-  .stat-box .s-sub { font-size: 9px; color: #555; margin-top: 2px; }
+      <section class="ticker">
+        <span class="ticker-item breaking">BREAKING</span>
+        <span class="ticker-item">Macomb County in the Michigan Senate Democratic primary? 30%</span>
+        <span class="ticker-item green">+19%</span>
+        <span class="ticker-item">Will Ruben Gallego vote "Yea" on the Clarity Act? 25%</span>
+        <span class="ticker-item red">-3%</span>
+      </section>
 
-  .timeline { padding: 20px 24px; }
-  .tl-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #1a1a1a;
-  }
-  .tl-header h1 { font-size: 13px; letter-spacing: 2px; color: #e0e0e0; }
-  .tl-header .count { font-size: 10px; color: #555; margin-left: auto; }
+      <section class="toolbar">
+        <div class="icon-group">
+          <span class="icon active">▲</span>
+          <span class="icon">◎</span>
+          <span class="icon">◧</span>
+          <span class="icon">✦</span>
+          <span class="icon">▤</span>
+          <span class="icon">⌂</span>
+        </div>
 
-  .year-marker {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 24px 0 12px;
-  }
-  .year-pill {
-    background: #1a1a1a;
-    color: #666;
-    font-size: 10px;
-    padding: 3px 10px;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
-  .year-line { flex: 1; height: 1px; background: #1a1a1a; }
+        <div class="timeline">
+          <span class="timeline-label">VISTA DE LÍNEA DE TIEMPO:</span>
+          <span class="day active">DOM</span>
+          <span class="day">LUN</span>
+          <span class="day">MAR</span>
+          <span class="day">MIÉ</span>
+          <span class="day">JUE</span>
+          <span class="day">VIE</span>
+          <span class="day">SÁB</span>
+          <span class="live-pill">● EN VIVO</span>
+        </div>
 
-  .item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 0 16px;
-    margin-bottom: 2px;
-    position: relative;
-  }
-  .item-time {
-    font-size: 9px;
-    color: #555;
-    padding-top: 14px;
-    text-align: right;
-    line-height: 1.4;
-  }
-  .item-body {
-    background: #111;
-    border: 1px solid #1a1a1a;
-    border-left: 3px solid #1a1a1a;
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    transition: border-color 0.15s;
-    position: relative;
-  }
-  .item-body:hover { border-left-color: #c0392b; background: #141414; cursor: pointer; }
+        <div class="avatar">👤</div>
+      </section>
 
-  .item-body.tipo-accidente { border-left-color: #c0392b; }
-  .item-body.tipo-judicial { border-left-color: #2980b9; }
-  .item-body.tipo-familiar { border-left-color: #8e44ad; }
-  .item-body.tipo-redes { border-left-color: #27ae60; }
-  .item-body.tipo-politico { border-left-color: #e67e22; }
-  .item-body.tipo-juicio { border-left-color: #f1c40f; }
+      <section class="cards">
+        <article class="card">
+          <div class="card-header">
+            <h2>DOMINO'S PIZZA</h2>
+            <span class="tag quiet">QUIET</span>
+          </div>
 
-  .item-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
-    flex-wrap: wrap;
-  }
-  .tag {
-    font-size: 8px;
-    padding: 2px 6px;
-    border-radius: 1px;
-    letter-spacing: 1px;
-    font-weight: bold;
-  }
-  .tag-accidente { background: #2d1010; color: #c0392b; }
-  .tag-judicial { background: #0d1e2d; color: #2980b9; }
-  .tag-familiar { background: #1d1028; color: #8e44ad; }
-  .tag-redes { background: #0d1e14; color: #27ae60; }
-  .tag-politico { background: #2d1e08; color: #e67e22; }
-  .tag-juicio { background: #2d2808; color: #f1c40f; }
+          <div class="card-status">
+            <span class="live-chip">EN VIVO</span>
+            <span class="card-note">Más tranquilo de lo habitual</span>
+          </div>
 
-  .item-source { font-size: 9px; color: #555; }
-  .item-title { font-size: 12px; color: #e0e0e0; line-height: 1.5; margin-bottom: 4px; }
-  .item-excerpt { font-size: 10px; color: #666; line-height: 1.6; }
+          <div class="chart">
+            <span style="height: 32%"></span>
+            <span style="height: 32%"></span>
+            <span style="height: 22%"></span>
+            <span style="height: 18%"></span>
+            <span style="height: 15%"></span>
+            <span style="height: 18%"></span>
+            <span style="height: 22%"></span>
+            <span style="height: 38%"></span>
+            <span style="height: 46%"></span>
+            <span style="height: 58%"></span>
+            <span style="height: 72%"></span>
+            <span style="height: 68%"></span>
+            <span style="height: 56%"></span>
+            <span style="height: 57%"></span>
+          </div>
+        </article>
 
-  .breaking-bar {
-    background: #1a0a0a;
-    border: 1px solid #c0392b;
-    border-left: 4px solid #c0392b;
-    padding: 10px 14px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .breaking-bar .b-label {
-    background: #c0392b;
-    color: #fff;
-    font-size: 8px;
-    padding: 2px 6px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
-  .breaking-bar .b-text { font-size: 11px; color: #e0e0e0; }
+        <article class="card">
+          <div class="card-header">
+            <h2>EXTREME PIZZA</h2>
+            <span class="tag">CERRADO</span>
+          </div>
 
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: #c0392b; display: inline-block; animation: blink 1s infinite; }
-</style>
+          <div class="card-status">
+            <span class="live-chip muted">EN VIVO</span>
+            <span class="card-note">Restaurante cerrado</span>
+          </div>
 
-<div style="background:#0a0a0a; min-height:700px; font-family:'Courier New',monospace;">
+          <div class="chart">
+            <span style="height: 36%"></span>
+            <span style="height: 39%"></span>
+            <span style="height: 40%"></span>
+            <span style="height: 38%"></span>
+            <span style="height: 39%"></span>
+            <span style="height: 42%"></span>
+            <span style="height: 54%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 66%"></span>
+            <span style="height: 66%"></span>
+            <span style="height: 58%"></span>
+            <span style="height: 40%"></span>
+            <span style="height: 0%"></span>
+            <span style="height: 0%"></span>
+          </div>
+        </article>
 
-<div class="top-bar">
-  <span class="logo">CASO GONZÁLEZ</span>
-  <span class="sep">|</span>
-  <span class="live-badge">EN VIVO</span>
-  <span class="juicio-badge">JUICIO INICIA 3 AGO 2026</span>
-  <span class="sep">|</span>
-  <span style="font-size:10px; color:#555">VILLA DOLORES · ALTAS CUMBRES · TRASLASIERRA</span>
-  <div class="right">
-    <span style="font-size:9px; color:#555">HOMICIDIO CULPOSO AGRAVADO</span>
-    <span style="font-size:9px; color:#c0392b">● EN PROCESO</span>
+        <article class="card">
+          <div class="card-header">
+            <h2>DISTRICT PIZZA PALACE</h2>
+            <span class="tag">CERRADO</span>
+          </div>
+
+          <div class="card-status">
+            <span class="live-chip muted">EN VIVO</span>
+            <span class="card-note">Restaurante cerrado</span>
+          </div>
+
+          <div class="chart">
+            <span style="height: 10%"></span>
+            <span style="height: 26%"></span>
+            <span style="height: 32%"></span>
+            <span style="height: 42%"></span>
+            <span style="height: 44%"></span>
+            <span style="height: 40%"></span>
+            <span style="height: 48%"></span>
+            <span style="height: 56%"></span>
+            <span style="height: 66%"></span>
+            <span style="height: 67%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 54%"></span>
+            <span style="height: 43%"></span>
+            <span style="height: 35%"></span>
+          </div>
+        </article>
+      </section>
+    </main>
   </div>
-</div>
-
-<div class="ticker">
-  <span>⚠ BREAKING — Juicio oral inicia lunes 3 de agosto 2026 en Cámara del Crimen de Villa Dolores &nbsp;&nbsp;&nbsp; ● Alexa Miranda, parapléjica desde el accidente, no pudo ser testigo presencial &nbsp;&nbsp;&nbsp; ● Familia Bengoa rechazó oferta económica de +300M pesos &nbsp;&nbsp;&nbsp; ● González llega al juicio en libertad pese a pedidos en contrario &nbsp;&nbsp;&nbsp;</span>
-</div>
-
-<div class="main">
-
-  <div class="sidebar">
-    <div class="sidebar-title">FILTRAR POR TIPO</div>
-    <div class="filter-group">
-      <div class="filter-label">CATEGORÍAS</div>
-      <button class="filter-btn active">▣  Todo el caso</button>
-      <button class="filter-btn">⬛  Accidente</button>
-      <button class="filter-btn">⬛  Judicial</button>
-      <button class="filter-btn">⬛  Familia víctima</button>
-      <button class="filter-btn">⬛  Redes sociales</button>
-      <button class="filter-btn">⬛  Político / institucional</button>
-      <button class="filter-btn">⬛  Enriquecimiento / lavado</button>
-    </div>
-
-    <div class="stat-box">
-      <div class="s-label">DÍAS DESDE EL ACCIDENTE</div>
-      <div class="s-val" id="dias-counter">—</div>
-      <div class="s-sub">29 OCT 2022 → HOY</div>
-    </div>
-
-    <div class="stat-box">
-      <div class="s-label">ESTADO JUDICIAL</div>
-      <div class="s-val" style="font-size:11px; color:#f1c40f; line-height:1.4">JUICIO<br>ORAL</div>
-      <div class="s-sub">VILLA DOLORES</div>
-    </div>
-
-    <div class="stat-box">
-      <div class="s-label">VÍCTIMA FATAL</div>
-      <div class="s-val" style="font-size:11px; color:#e0e0e0; line-height:1.4">ALEJANDRA<br>BENGOA</div>
-      <div class="s-sub">DOCENTE · 56 AÑOS</div>
-    </div>
-
-    <div class="stat-box">
-      <div class="s-label">LESIONADA GRAVE</div>
-      <div class="s-val" style="font-size:11px; color:#e0e0e0; line-height:1.4">ALEXA<br>MIRANDA</div>
-      <div class="s-sub">PARAPLEJIA PERMANENTE</div>
-    </div>
-  </div>
-
-  <div class="timeline">
-    <div class="tl-header">
-      <span class="dot"></span>
-      <h1>TIMELINE DEL CASO</h1>
-      <span class="count">ORDENADO: MÁS RECIENTE → MÁS ANTIGUO</span>
-    </div>
-
-    <div class="breaking-bar">
-      <span class="b-label">HOY</span>
-      <span class="b-text">El juicio oral comienza en menos de 48 horas. González cambió tres abogados defensores en los últimos días.</span>
-    </div>
-
-    <div class="year-marker">
-      <span class="year-pill">2026</span>
-      <div class="year-line"></div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">JUL 30<br>2026</div>
-      <div class="item-body tipo-juicio">
-        <div class="item-meta">
-          <span class="tag tag-juicio">JUICIO</span>
-          <span class="item-source">El Diario de Carlos Paz</span>
-        </div>
-        <div class="item-title">La defensa anticipa su estrategia: pedirá la absolución argumentando que González no invadió el carril contrario</div>
-        <div class="item-excerpt">A tres días del inicio del debate oral, los abogados Miguel Ángel Ortiz Pellegrini y Eduardo Caeiro adelantaron que disputarán las pericias accidentológicas oficiales.</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">JUL 22<br>2026</div>
-      <div class="item-body tipo-judicial">
-        <div class="item-meta">
-          <span class="tag tag-judicial">JUDICIAL</span>
-          <span class="item-source">Perfil Córdoba</span>
-        </div>
-        <div class="item-title">González realizó tres cambios simultáneos en su equipo legal a menos de dos semanas del juicio</div>
-        <div class="item-excerpt">Revocó a Pedro Eugenio Despouy Santoro e incorporó a Eduardo Caeiro como codefensor penal. También designó nuevo letrado civil.</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">MAY 27<br>2026</div>
-      <div class="item-body tipo-judicial">
-        <div class="item-meta">
-          <span class="tag tag-judicial">JUDICIAL</span>
-          <span class="item-source">Infobae · Cadena 3 · El Doce</span>
-        </div>
-        <div class="item-title">Confirmada la fecha del juicio oral: 3 al 27 de agosto de 2026 en Villa Dolores</div>
-        <div class="item-excerpt">La Cámara del Crimen de Villa Dolores fijó el cronograma. González llega imputado por homicidio culposo agravado y lesiones culposas agravadas.</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">MAY 28<br>2026</div>
-      <div class="item-body tipo-familiar">
-        <div class="item-meta">
-          <span class="tag tag-familiar">FAMILIA VÍCTIMA</span>
-          <span class="item-source">La Tinta</span>
-        </div>
-        <div class="item-title">"Mi hija no puede caminar, no puede vivir: sobrevive" — madre de Alexa Miranda rechaza oferta de más de $300 millones</div>
-        <div class="item-excerpt">La familia rechazó la probation propuesta por la defensa. La oferta económica fue desestimada judicialmente.</div>
-      </div>
-    </div>
-
-    <div class="year-marker">
-      <span class="year-pill">2025</span>
-      <div class="year-line"></div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">FEB<br>2025</div>
-      <div class="item-body tipo-judicial">
-        <div class="item-meta">
-          <span class="tag tag-judicial">ENRIQUECIMIENTO</span>
-          <span class="item-source">Letrap</span>
-        </div>
-        <div class="item-title">Juez Vaca Narvaja le dictó prisión domiciliaria en Villa Dolores por la causa de lavado de activos</div>
-        <div class="item-excerpt">El fiscal Maximiliano Hairabedian detectó propiedades y movimientos de fondos que González no pudo justificar. Causa paralela al choque.</div>
-      </div>
-    </div>
-
-    <div class="year-marker">
-      <span class="year-pill">2024</span>
-      <div class="year-line"></div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">OCT 29<br>2024</div>
-      <div class="item-body tipo-familiar">
-        <div class="item-meta">
-          <span class="tag tag-familiar">FAMILIA VÍCTIMA</span>
-          <span class="item-source">Perfil · Vía Córdoba</span>
-        </div>
-        <div class="item-title">A dos años del accidente, la familia cuestiona a la fiscal: "La pericia oficial es bastante generosa con González"</div>
-        <div class="item-excerpt">Laura Bengoa, hermana de Alejandra, y Vera, hija de la fallecida, hablan con El Doce y expresan desconfianza en la misma fiscal que los acusará en el juicio.</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">ABR 05<br>2024</div>
-      <div class="item-body tipo-judicial">
-        <div class="item-meta">
-          <span class="tag tag-judicial">JUDICIAL</span>
-          <span class="item-source">Infobae</span>
-        </div>
-        <div class="item-title">La Fiscalía de Cura Brochero (fiscal Analía Gallarato) pide elevar a juicio la causa por homicidio culposo agravado</div>
-        <div class="item-excerpt">Se incorporan pericias accidentológicas, reconstrucción virtual y testimonios. La fiscalía concluye que González tuvo una conducción imprudente.</div>
-      </div>
-    </div>
-
-    <div class="year-marker">
-      <span class="year-pill">2022 — EL ACCIDENTE</span>
-      <div class="year-line"></div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">NOV 02<br>2022</div>
-      <div class="item-body tipo-politico">
-        <div class="item-meta">
-          <span class="tag tag-politico">POLÍTICO</span>
-          <span class="item-source">La Nación</span>
-        </div>
-        <div class="item-title">Se revela que la BMW era un vehículo con patente "melliza" — judicializado y cedido a la Legislatura para uso oficial</div>
-        <div class="item-excerpt">González usaba el auto para fines personales sin los permisos requeridos. Allegados sacaron bolsos del vehículo en el lugar del accidente.</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">OCT 31<br>2022</div>
-      <div class="item-body tipo-judicial">
-        <div class="item-meta">
-          <span class="tag tag-judicial">JUDICIAL</span>
-          <span class="item-source">Cadena 3 · La Nación</span>
-        </div>
-        <div class="item-title">González queda doblemente imputado: homicidio culposo agravado y lesiones culposas agravadas</div>
-        <div class="item-excerpt">En su primera declaración manifiesta no recordar el accidente. Su abogado sostiene inicialmente que fue la víctima quien cruzó el carril, versión descartada por las pericias.</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-time">OCT 29<br>2022</div>
-      <div class="item-body tipo-accidente">
-        <div class="item-meta">
-          <span class="tag tag-accidente">ACCIDENTE</span>
-          <span class="item-source">Cadena 3 — Roberto Fontanari</span>
-        </div>
-        <div class="item-title">El legislador Oscar González choca de frente en el Camino de las Altas Cumbres. Muere Alejandra Bengoa (56). Alexa Miranda queda parapléjica.</div>
-        <div class="item-excerpt">Paraje Niña Paula, km 17, cerca de Mina Clavero. González conducía una BMW X1 oficial en dirección a Córdoba. Impacta de frente el Renault Sandero de Bengoa. Marina Bengoa, otra de las ocupantes, resulta gravemente herida.</div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
-<script>
-  const accidente = new Date('2022-10-29');
-  const hoy = new Date('2026-08-01');
-  const dias = Math.floor((hoy - accidente) / (1000*60*60*24));
-  document.getElementById('dias-counter').textContent = dias.toLocaleString('es-AR');
-
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-</script>
+</body>
+</html>
